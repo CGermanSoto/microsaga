@@ -2,7 +2,6 @@ package com.germansoto.microsaga;
 
 import com.germansoto.microsaga.config.AppConfig;
 import com.germansoto.microsaga.config.DatabaseConfig;
-import com.germansoto.microsaga.controller.PersonajeController;
 import com.germansoto.microsaga.util.Constants;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class MicroSagaPlay extends Application {
 
     @Autowired
     private DatabaseConfig database;
@@ -25,7 +24,7 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MicroSagaPlay.class.getResource("home.fxml"));
         fxmlLoader.setControllerFactory(context::getBean); // Configura el controlador de FXML con el contenedor Spring
 
         Scene scene = new Scene(fxmlLoader.load());
