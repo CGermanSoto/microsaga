@@ -9,15 +9,17 @@ module com.germansoto.microsaga {
     requires spring.core;
     requires spring.beans;
     requires java.sql;
+    requires java.persistence;
 
     // Abre todos los paquetes bajo com.germansoto.microsaga a los módulos especificados
     opens com.germansoto.microsaga to javafx.fxml, spring.core, spring.beans, spring.context;
 
     // Abre el paquete de configuración específico a los módulos de Spring
     opens com.germansoto.microsaga.config to spring.core, spring.beans;
-    opens com.germansoto.microsaga.controller to spring.beans, spring.core;
     opens com.germansoto.microsaga.service to spring.beans, spring.core;
     opens com.germansoto.microsaga.service.impl to spring.beans, spring.core;
+    opens com.germansoto.microsaga.controller to javafx.fxml, spring.beans, spring.context, spring.core;
+    opens com.germansoto.microsaga.model to spring.beans, spring.core, org.hibernate.annotations, spring.context;
 
     // Exporta todos los paquetes bajo com.germansoto.microsaga
     exports com.germansoto.microsaga;
@@ -25,4 +27,5 @@ module com.germansoto.microsaga {
     exports com.germansoto.microsaga.controller;
     exports com.germansoto.microsaga.service;
     exports com.germansoto.microsaga.service.impl;
+    exports com.germansoto.microsaga.model;
 }
