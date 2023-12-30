@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.germansoto.microsaga.controller.MicroSagaPlayController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Pane prefHeight="600.0" prefWidth="800.0">
+            <children>
+                <TabPane minWidth="760.0" prefHeight="560.0" prefWidth="760.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                    <tabs>
+                        <Tab text="Personaje">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="84.0" layoutY="16.0" prefHeight="453.0" prefWidth="255.0">
+                                 <children>
+                                    <ImageView fitHeight="454.0" fitWidth="257.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/chapter_2.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children></Pane>
+                              <TableView layoutX="434.0" layoutY="120.0" prefHeight="341.0" prefWidth="243.0">
+                                <columns>
+                                  <TableColumn prefWidth="122.0" text="Stats" />
+                                  <TableColumn prefWidth="119.0" text="Otros" />
+                                </columns>
+                              </TableView>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="259.0" layoutY="14.0" prefHeight="75.0" prefWidth="243.0" text="Frieren" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Old English Text MT" size="65.0" />
+                                 </font>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </Label>
+                           </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Create Chapter">
+                            <content>
+                                <fx:include source="create.fxml" />
+                            </content>
+                        </Tab>
+                        <Tab text="Otros">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </Pane>
+    </children>
+</VBox>

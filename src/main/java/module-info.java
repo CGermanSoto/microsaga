@@ -1,15 +1,13 @@
-
 module com.rpg.microsaga {
         requires javafx.controls;
         requires javafx.fxml;
 
         requires org.controlsfx.controls;
         requires org.kordamp.bootstrapfx.core;
-
+        requires java.sql;
         requires spring.context;
         requires spring.core;
         requires spring.beans;
-        requires java.sql;
         requires java.persistence;
         requires org.hibernate.orm.core;
 
@@ -37,4 +35,5 @@ module com.rpg.microsaga {
         exports com.rpg.microsaga.model;
         exports com.rpg.microsaga.entity;
         exports com.rpg.microsaga.dao.impl;
-        }
+}
+

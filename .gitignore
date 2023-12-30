@@ -2,7 +2,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-
+database.properties
+/target
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
@@ -33,6 +34,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### Mac OS ###
-.DS_Store
