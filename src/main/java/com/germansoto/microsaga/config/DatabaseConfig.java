@@ -14,13 +14,18 @@ public class DatabaseConfig {
 
     static {
         try (InputStream input = DatabaseConfig.class.getClassLoader().getResourceAsStream("database.properties")) {
-            properties.load(input);
-            System.out.println("Conexión exitosa a la base de datos.");
+            if (input != null) {
+                properties.load(input);
+                System.out.println("Conexión exitosa a la base de datos.");
+            } else {
+                System.err.println("Error: No se encontró el archivo database.properties en el classpath.");
+            }
         } catch (Exception e) {
             System.err.println("Error al conectar a la base de datos: " + e.getMessage());
-            e.printStackTrace(); // Manejo de errores: Puedes cambiar esto según tus necesidades
+            e.printStackTrace();
         }
     }
+
 
     public static String getUrl() {
         return properties.getProperty("db.url");

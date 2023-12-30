@@ -1,5 +1,7 @@
 package com.germansoto.microsaga.service;
 
+import com.germansoto.microsaga.entity.Chapter;
+
 public interface IPersonajeService {
-    String funciona();
+    void createChapter(Chapter chapter);
 }

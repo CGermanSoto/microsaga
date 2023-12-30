@@ -11,6 +11,6 @@ public class PersonajeController {
     private IPersonajeService personajeService;
 
     public String probandoDependencias(){
-        return personajeService.funciona();
+        return "personajeService.funciona()";
     }
 }
