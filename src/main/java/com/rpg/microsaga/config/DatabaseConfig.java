@@ -13,6 +13,7 @@ public class DatabaseConfig {
     private static final Properties properties = new Properties();
 
     static {
+        // Agregar database.properties
         try (InputStream input = DatabaseConfig.class.getClassLoader().getResourceAsStream("database.properties")) {
             if (input != null) {
                 properties.load(input);
