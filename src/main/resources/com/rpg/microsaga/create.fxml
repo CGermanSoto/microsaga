@@ -3,14 +3,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rpg.microsaga.controller.tabs.CreateController">
-
-
-            <VBox alignment="CENTER" layoutX="114.0" layoutY="105.0" prefHeight="190.0" prefWidth="410.0" spacing="10">
-                <Label text="Nombre del Personaje:" />
-                <TextField fx:id="chapterNameField" alignment="CENTER" maxWidth="200.0" minWidth="100.0" prefHeight="25.0" prefWidth="200.0" />
-                <Button mnemonicParsing="false" text="Crear" fx:id="btn_create" onAction="#onClickBtn_create"/>
-
-            </VBox>
-
+<AnchorPane maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rpg.microsaga.controller.tabs.CreateController">
+    <StackPane alignment="CENTER">
+        <VBox spacing="10" />
+    </StackPane>
+      <ComboBox fx:id="specializationNameField" layoutX="255.0" layoutY="372.0" maxWidth="200.0" minWidth="100.0" prefHeight="25.0" prefWidth="200.0" />
+     <Button fx:id="btn_create" layoutX="328.0" layoutY="425.0" mnemonicParsing="false" onAction="#onClickBtn_create" text="Crear" />
+     <VBox layoutX="219.0" layoutY="174.0" spacing="10" />
+      <ComboBox fx:id="linageNameField" layoutX="256.0" layoutY="238.0" maxWidth="200.0" minWidth="100.0" prefHeight="25.0" prefWidth="200.0" />
+     <VBox layoutX="208.0" layoutY="57.0" spacing="10" />
+      <TextField fx:id="chapterNameField" alignment="CENTER" layoutX="255.0" layoutY="126.0" maxWidth="200.0" minWidth="100.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="295.0" layoutY="79.0" text="Nombre del Personaje:" />
+      <Label layoutX="310.0" layoutY="332.0" text="Especialización:" />
+      <Label layoutX="332.0" layoutY="208.0" text="Linage:" />
 </AnchorPane>
