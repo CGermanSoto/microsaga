@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rpg.microsaga.controller.tabs.ChapterController">
+    <StackPane alignment="CENTER">
+        <VBox spacing="10" />
+    </StackPane>
+        <AnchorPane prefHeight="500.0" prefWidth="700.0">
+            <children>
+                <Pane layoutX="14.0" layoutY="14.0" />
+                <TableView fx:id="tableView" layoutX="378.0" layoutY="100.0" prefHeight="376.0" prefWidth="211.0">
+                    <columns>
+                        <TableColumn fx:id="otrosColumn" editable="false" minWidth="0.0" prefWidth="160.0" sortable="false" text="Stats" />
+                        <TableColumn fx:id="statsColumn" prefWidth="49.0" text="Points" />
+                    </columns>
+                </TableView>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" prefHeight="76.0" prefWidth="305.0" text="Frieren" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                    <font>
+                        <Font name="Old English Text MT" size="80.0" />
+                    </font>
+                    <effect>
+                        <Lighting>
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+                        </Lighting>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Label>
+                <ImageView fitHeight="376.0" fitWidth="226.0" layoutX="119.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/chapter_2.jpg" />
+                    </image>
+                </ImageView>
+            </children></AnchorPane>
+</AnchorPane>

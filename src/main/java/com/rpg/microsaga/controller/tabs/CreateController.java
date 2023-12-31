@@ -46,7 +46,9 @@ public class CreateController {
     public void cargarPantallar(){
         ObservableList<String> specializationOptions = FXCollections.observableArrayList("Esp1", "Esp2", "Esp3");
         ObservableList<String> linageOptions = FXCollections.observableArrayList("Lin1", "Lin2", "Lin3");
-        this.specializationNameField.setItems(specializationOptions);
+        if(this.specializationNameField != null){
+            this.specializationNameField.setItems(specializationOptions);
+        }
         this.linageNameField.setItems(linageOptions);
     }
 

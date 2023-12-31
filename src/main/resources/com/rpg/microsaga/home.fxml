@@ -18,41 +18,7 @@
                 <TabPane style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
                     <tabs>
                         <Tab text="Personaje">
-                            <content>
-                                <AnchorPane>
-                           <children>
-                              <Pane layoutX="14.0" layoutY="14.0" />
-                              <TableView layoutX="380.0" layoutY="104.0" prefHeight="373.0" prefWidth="242.0">
-                                <columns>
-                                  <TableColumn prefWidth="122.0" text="Stats" />
-                                  <TableColumn prefWidth="119.0" text="Otros" />
-                                </columns>
-                              </TableView>
-                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="178.0" layoutY="14.0" prefHeight="76.0" prefWidth="305.0" text="Frieren" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
-                                 <font>
-                                    <Font name="Old English Text MT" size="65.0" />
-                                 </font>
-                                 <effect>
-                                    <Lighting>
-                                       <bumpInput>
-                                          <Shadow />
-                                       </bumpInput>
-                                       <light>
-                                          <Light.Distant />
-                                       </light>
-                                    </Lighting>
-                                 </effect>
-                                 <cursor>
-                                    <Cursor fx:constant="DEFAULT" />
-                                 </cursor>
-                              </Label>
-                              <ImageView fitHeight="376.0" fitWidth="226.0" layoutX="47.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@images/chapter_2.jpg" />
-                                 </image>
-                              </ImageView>
-                           </children></AnchorPane>
-                            </content>
+                            <fx:include source="chapter.fxml"/>
                         </Tab>
                         <Tab text="Create Chapter">
                             <content>
@@ -61,7 +27,7 @@
                         </Tab>
                         <Tab text="Otros">
                             <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane />
                             </content>
                         </Tab>
                     </tabs>
