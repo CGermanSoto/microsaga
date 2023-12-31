@@ -25,7 +25,7 @@ public class MicroSagaPlay extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MicroSagaPlay.class.getResource("home.fxml"));
-        fxmlLoader.setControllerFactory(context::getBean); // Configura el controlador de FXML con el contenedor Spring
+        fxmlLoader.setControllerFactory(context::getBean); // Configura el controlador de FXML con el contenedor Spring...
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle(Constants.GAME_NAME);
