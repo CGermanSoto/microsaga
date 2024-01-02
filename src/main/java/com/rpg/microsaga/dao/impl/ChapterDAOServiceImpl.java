@@ -4,8 +4,8 @@ import com.rpg.microsaga.dao.IChapterDAOService;
 import com.rpg.microsaga.entity.Chapter;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 
 @Repository
 public class ChapterDAOServiceImpl implements IChapterDAOService {
@@ -14,11 +14,7 @@ public class ChapterDAOServiceImpl implements IChapterDAOService {
 
     @Override
     public void saveChapter(Chapter chapter) {
-        try {
-            entityManager.persist(chapter);
-        } catch (Exception e) {
-            // Manejar la excepción según tus requisitos
-            e.printStackTrace();
-        }
+        entityManager.persist(chapter);
     }
 }
+

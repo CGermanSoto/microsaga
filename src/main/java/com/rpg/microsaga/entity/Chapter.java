@@ -1,6 +1,12 @@
 package com.rpg.microsaga.entity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+
 
 @Entity
 @Table(name = "chapter")
@@ -26,10 +32,20 @@ public class Chapter {
     private int defense;
 
     @Column(name="FK_LINAGE")
-    private Linage linage;
+    private String linage;
 
     @Column(name = "FK_SPECIALIZATION")
-    private Specialization specialization;
+    private String specialization;
+
+    // Constructor, getters, setters, etc.
+
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
 
     public Long getId() {
         return id;
@@ -79,19 +95,11 @@ public class Chapter {
         this.defense = defense;
     }
 
-    public Linage getLinage() {
+    public String getLinage() {
         return linage;
     }
 
-    public void setLinage(Linage linage) {
+    public void setLinage(String linage) {
         this.linage = linage;
-    }
-
-    public Specialization getSpecialization() {
-        return specialization;
-    }
-
-    public void setSpecialization(Specialization specialization) {
-        this.specialization = specialization;
     }
 }

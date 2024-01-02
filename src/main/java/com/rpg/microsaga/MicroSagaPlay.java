@@ -1,22 +1,17 @@
 package com.rpg.microsaga;
 
-import com.rpg.microsaga.config.AppConfig;
-import com.rpg.microsaga.config.DatabaseConfig;
+import com.rpg.microsaga.config.JpaConfig;
 import com.rpg.microsaga.util.Constants;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.IOException;
 
 public class MicroSagaPlay extends Application {
-
-    @Autowired
-    private DatabaseConfig database;
-    private final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+    private final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JpaConfig.class);
 
     public static void main(String[] args) {
         launch();

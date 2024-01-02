@@ -53,7 +53,20 @@ public class CreateController {
     }
 
     public void onClickBtn_create(){
-        System.out.println(chapterNameField.getText());
+        Chapter newChapter = new Chapter();
+        this.setChapterData(newChapter);
+        this.saveChapter(newChapter);
+    }
+
+    public void setChapterData(Chapter chapter){
+        chapter.setId(1L);
+        chapter.setName(chapterNameField.getText());
+        chapter.setLife(100);
+        chapter.setDefense(50);
+        chapter.setLinage(linageNameField.getValue());
+        chapter.setSpecialization("prueba");
+        chapter.setLevel(1);
+        chapter.setAttack(100);
     }
 
 	public void saveChapter(Chapter chapter){

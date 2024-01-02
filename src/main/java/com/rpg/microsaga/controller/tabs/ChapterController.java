@@ -31,12 +31,7 @@ public class ChapterController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Puedes crear un ObservableList o usar otros tipos de listas según tus necesidades
-        // En este ejemplo, se utiliza un simple ObservableList de String
-        // Puedes reemplazar esto con tu lógica para obtener los datos
         ObservableList<String> datos = FXCollections.observableArrayList(this.listStat());
-
-        // Asigna los datos a la TableView
         tableView.setItems(datos);
 
         // Configura cómo se deben mostrar los datos en las columnas
